@@ -268,21 +268,6 @@ class UsageUI {
 		sectionsContainer.appendChild(this.usageSection.elements.container);
 		content.appendChild(sectionsContainer);
 
-		// Add footers
-		const isElectron = await sendBackgroundMessage({ type: 'isElectron' });
-		if (!isElectron) {
-			const desktopFooter = this.createDesktopFooter();
-			content.appendChild(desktopFooter);
-
-			const qolFooter = this.createQoLFooter();
-			if (qolFooter) {
-				content.appendChild(qolFooter);
-			}
-		}
-
-		const donateFooter = this.createDonateFooter();
-		content.appendChild(donateFooter);
-
 		container.appendChild(header);
 		container.appendChild(content);
 

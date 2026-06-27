@@ -310,10 +310,6 @@ class VersionNotificationCard extends ButtonNotificationCard {
 		patchNotesLink.textContent = localize('card.release_notes');
 		this.element.appendChild(patchNotesLink);
 
-		this.addKofiButton();
-		this.addQoLButton();
-		this.addDesktopFooter();
-
 		this.addCloseButton();
 		this.makeCardDraggable(dragHandle);
 	}
@@ -592,7 +588,6 @@ class FloatingCardsUI {
 		// Delay to allow other extensions (like QoL) to load first
 		await new Promise(resolve => setTimeout(resolve, 1000));
 		await this.checkForVersionUpdate();
-		await this.checkForDonationMilestone();
 		await this.checkForRateReminder();
 	}
 

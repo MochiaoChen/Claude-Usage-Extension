@@ -93,6 +93,7 @@ class LengthUI {
 		container.className = 'text-text-500 text-xs ut-select-none ut-title-stats';
 		container.style.marginTop = '2px';
 		container.style.flexBasis = '100%'; // Force onto its own line
+		container.style.textAlign = 'center';
 
 		const length = document.createElement('span');
 		const cost = document.createElement('span');

@@ -560,6 +560,7 @@ function getTitleAreaAnchor() {
 				marginTop: '-36px',
 				marginLeft: `-${headerPadding}px`,
 				paddingLeft: `${headerPadding + 8}px`,
+				textAlign: 'center',
 			},
 			classes: { add: ['bg-bg-100'], remove: ['!px-2'] },
 		};
@@ -569,7 +570,7 @@ function getTitleAreaAnchor() {
 		return {
 			parent: titleLine,
 			referenceNode: null,
-			styles: { flexBasis: '100%', paddingLeft: '6px' },
+			styles: { flexBasis: '100%', paddingLeft: '0', textAlign: 'center' },
 			classes: {}
 		};
 	}
@@ -603,6 +604,7 @@ const pageLayouts = {
 							marginTop: '-36px',
 							marginLeft: `-${headerPadding}px`,
 							paddingLeft: `${headerPadding + 8}px`,
+							textAlign: 'center',
 						},
 						classes: { add: ['bg-bg-100'], remove: ['!px-2'] },
 					};
@@ -612,7 +614,7 @@ const pageLayouts = {
 					return {
 						parent: titleLine,
 						referenceNode: null,
-						styles: { flexBasis: '100%', paddingLeft: '6px' },
+						styles: { flexBasis: '100%', paddingLeft: '0', textAlign: 'center' },
 						classes: {},
 					};
 				}
@@ -719,7 +721,7 @@ const pageLayouts = {
 				return {
 					parent: headerRow,
 					referenceNode: null,
-					styles: { flexBasis: '100%', paddingLeft: '8px', marginTop: '12px' },
+					styles: { flexBasis: '100%', paddingLeft: '0', textAlign: 'center', marginTop: '12px' },
 				};
 			},
 		},

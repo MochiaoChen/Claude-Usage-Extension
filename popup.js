@@ -135,8 +135,6 @@ function applyStaticLocalization() {
 	if (helpEl) helpEl.textContent = localize('popup.help');
 	const debugEl = document.getElementById('debug');
 	if (debugEl) debugEl.textContent = localize('common.debug_logs');
-	const donateEl = document.getElementById('donate');
-	if (donateEl) donateEl.textContent = localize('popup.donate');
 }
 
 async function loadUsageData() {
@@ -185,11 +183,6 @@ async function loadUsageData() {
 
 document.getElementById('debug').addEventListener('click', () => {
 	chrome.tabs.create({ url: chrome.runtime.getURL('debug.html') });
-	window.close();
-});
-
-document.getElementById('donate').addEventListener('click', () => {
-	chrome.tabs.create({ url: 'https://ko-fi.com/lugia19' });
 	window.close();
 });
 
